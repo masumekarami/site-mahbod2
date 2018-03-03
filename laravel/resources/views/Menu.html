@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--CSS-->
+    <link rel="stylesheet" href="Page1.css">
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-reboot.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+
+</head>
+<body>
+<div id="parentAll">
+    <div id="Gallery" class="foo Line">
+        <img src="IMG/LogoColor/GalleryLogo.png" class="LogoGallery"/>
+    </div>
+    <div id="Education" class="foo Line">
+        <img src="IMG/LogoColor/EducationLogo.png" class="LogoEducation"/>
+    </div>
+    <div id="Article" class="foo Line">
+        <img src="IMG/LogoColor/ArticleLogo.png" class="LogoArticle"/>
+    </div>
+    <div id="AboutMe" class="foo Line">
+        <img src="IMG/LogoColor/AboutMeLogo.png" class="LogoMe"/>
+    </div>
+    <div id="Empty-a" class="foo Line">
+    </div>
+    <div id="login" class="foo Line">
+    </div>
+    <div id="Empty-b" class="foo Line">
+    </div>
+    <div id="Empty-c" class="foo Line">
+    </div>
+    <div id="Empty-d" class="foo Line">
+    </div>
+</div>
+    <!--.................................................-->
+    <div id="ParentImage">
+        <div>
+            <img src="../assets/IMG/benafsh.png"  class="LineImage item5"/></img>
+        </div>
+        <!--..............-->
+        <div>
+            <img src="../assets/IMG/benafsh.png"  class="LineImage item4"/></img>
+        </div>
+        <!--..............-->
+        <div>
+            <img src="../assets/IMG/benafsh.png"  class="LineImage item3"/></img>
+        </div>
+        <!--..............-->
+        <div>
+            <img src="../assets/IMG/oooo.png"  class="LineImage item2"/></img>
+        </div>
+        <!--..............-->
+        <div>
+            <img src="../assets/IMG/ooo.png"  class="LineImage item1"/></img>
+        </div>
+
+    </div>
+    <div id="Div1" class="row col-lg-12"></div>
+    <div id="Div2" class="row col-lg-12"></div>
+    <div id="Div3" class="row col-lg-12"></div>
+    <div id="Div4" class="row col-lg-12"></div>
+    <div id="Div5" class="row col-lg-12"></div>
+    <div id="Div6" class="row col-lg-12"></div>
+
+
+<div style="display: none">
+
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <!--ANGULAR-->
+    <script src="/node_modules/angular/angular.js"></script>
+    <!--jQuery-->
+    <script src="JQ/jquery-3.3.1.slim.min.js"></script>
+
+</div>
+</body>
+</html>
+<script>
+    window.sr = ScrollReveal({ reset: true });
+    // Custom Settings
+    sr.reveal('#Gallery', {
+        origin: 'top',
+        duration:1000
+    });
+    sr.reveal('#Education', {
+
+        duration: 2000
+    });
+    sr.reveal('#Article', {
+        origin: 'top',
+        duration:3000
+    });
+    sr.reveal('#AboutMe', {
+        origin: 'top',
+        duration: 4000
+    });
+    sr.reveal('#Empty-a', {
+        origin: 'top',
+        duration: 5000
+    });
+    sr.reveal('#login', {
+        origin: 'top',
+        duration: 6000
+    });
+    sr.reveal('#Empty-b', {
+        origin: 'top',
+        duration: 7000
+    });
+    sr.reveal('#Empty-c', {
+        origin: 'top',
+        duration: 8000
+    });
+    sr.reveal('#Empty-d', {
+        origin: 'top',
+        duration: 9000
+    });
+    // IMG LODING
+    sr.reveal('.LineImage', {
+        origin: 'top',
+        delay: 3000,
+        duration: 2000,
+
+    });
+    // Onclick IMAGE
+    $( "#imgLogin" ).click(function() {
+        $("#AboutMe").animate({display: "block"});
+        // $( "#Div1" ).toggle( "slow" );
+
+
+    });
+        $( "#imgAboutMe" ).click(function() {
+            $( "#Div2" ).toggle( "slow" );
+        });
+        $( "#imgGallery" ).click(function() {
+            $( "#Div3" ).toggle( "slow" );
+        });
+        $( "#imgEducation" ).click(function() {
+            $( "#Div4" ).toggle( "slow" );
+        });
+        $( "#imgArticle" ).click(function() {
+            $( "#Div5" ).toggle( "slow" );
+        });
+</script>
+<script>
+    // HOVER BY IMG
+    $('.item1').hover(function () {
+        $(".LogoGallery").show("slow");
+    },function () {
+        $(".LogoGallery ").hide("slow");
+
+    });
+    $('.item2').hover(function () {
+        $(".LogoEducation").show("slow");
+    },function () {
+        $(".LogoEducation ").hide("slow");
+
+    });
+
+    $('.item3').hover(function () {
+        $(".LogoArticle").show("slow");
+    },function () {
+        $(".LogoArticle ").hide("slow");
+
+    });
+    $('.item4').hover(function () {
+        $(".LogoMe").show("slow");
+    },function () {
+        $(".LogoMe ").hide("slow");
+
+    });
+    // ...........................................................................
+
+</script>
+<script>
+$(document).ready(function(){
+    // onclick Gallery
+    $(".item1").click(function(){
+        $(".item1").fadeOut();
+        $(".item2").fadeOut();
+        $(".item3").fadeOut();
+        $(".item4").fadeOut();
+        $(".item5").fadeOut();
+        $("#Education").fadeOut(1100);
+        $("#Article").fadeOut(1400);
+        $("#AboutMe").fadeOut(1600);
+        $("#Empty-a").fadeOut(1800);
+        $("#login").fadeOut(2000);
+        $("#Empty-b").fadeOut(2100);
+        $("#Empty-c").fadeOut(2400);
+        $("#Empty-d").fadeOut(2600);
+        $("#Div1").fadeIn(10000);
+    });
+    // onclick Education
+    $(".item2").click(function(){
+        $(".item1").fadeOut();
+        $(".item2").fadeOut();
+        $(".item3").fadeOut();
+        $(".item4").fadeOut();
+        $(".item5").fadeOut();
+        $("#Gallery").fadeOut(1100);
+        $("#Article").fadeOut(1400);
+        $("#AboutMe").fadeOut(1600);
+        $("#Empty-a").fadeOut(1800);
+        $("#login").fadeOut(2000);
+        $("#Empty-b").fadeOut(2100);
+        $("#Empty-c").fadeOut(2400);
+        $("#Empty-d").fadeOut(2600);
+        $("#Div2").fadeIn(10000);
+    });
+    // onclick Article
+    $(".item3").click(function(){
+        $(".item1").fadeOut();
+        $(".item2").fadeOut();
+        $(".item3").fadeOut();
+        $(".item4").fadeOut();
+        $(".item5").fadeOut();
+        $("#Gallery").fadeOut(1100);
+        $("#Education").fadeOut(1400);
+        $("#AboutMe").fadeOut(1600);
+        $("#Empty-a").fadeOut(1800);
+        $("#login").fadeOut(2000);
+        $("#Empty-b").fadeOut(2100);
+        $("#Empty-c").fadeOut(2400);
+        $("#Empty-d").fadeOut(2600);
+        $("#Div3").fadeIn(10000);
+    });
+    // onclick AbouteMe
+    $(".item4").click(function(){
+        $(".item1").fadeOut();
+        $(".item2").fadeOut();
+        $(".item3").fadeOut();
+        $(".item4").fadeOut();
+        $(".item5").fadeOut();
+        $("#Gallery").fadeOut(1100);
+        $("#Education").fadeOut(1400);
+        $("#Article").fadeOut(1600);
+        $("#Empty-a").fadeOut(1800);
+        $("#login").fadeOut(2000);
+        $("#Empty-b").fadeOut(2100);
+        $("#Empty-c").fadeOut(2400);
+        $("#Empty-d").fadeOut(2600);
+        $("#Div4").fadeIn(10000);
+    });
+    // onclick OrderMe
+    $(".item5").click(function(){
+        $(".item1").fadeOut();
+        $(".item2").fadeOut();
+        $(".item3").fadeOut();
+        $(".item4").fadeOut();
+        $(".item5").fadeOut();
+        $("#Gallery").fadeOut(1100);
+        $("#Education").fadeOut(1400);
+        $("#Article").fadeOut(1600);
+        $("#AboutMe").fadeOut(1800);
+        $("#login").fadeOut(2000);
+        $("#Empty-b").fadeOut(2100);
+        $("#Empty-c").fadeOut(2400);
+        $("#Empty-d").fadeOut(2600);
+        $("#Div5").fadeIn(10000);
+    });
+    // onclick Log in
+    $(".item6").click(function(){
+        $(".item1").fadeOut();
+        $(".item2").fadeOut();
+        $(".item3").fadeOut();
+        $(".item4").fadeOut();
+        $(".item5").fadeOut();
+        $("#Gallery").fadeOut(1100);
+        $("#Education").fadeOut(1400);
+        $("#Article").fadeOut(1600);
+        $("#AboutMe").fadeOut(1800);
+        $("#Empty-a").fadeOut(2000);
+        $("#Empty-b").fadeOut(2100);
+        $("#Empty-c").fadeOut(2400);
+        $("#Empty-d").fadeOut(2600);
+        $("#Div6").fadeIn(10000);
+    });
+});
+</script>

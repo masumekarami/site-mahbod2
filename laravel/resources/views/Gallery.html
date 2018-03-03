@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <!--css-->
+    <link rel="stylesheet" href="Gallery.css">
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-reboot.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</head>
+
+<body>
+<div class="container-fluid">
+<div class="row">
+    <div class="col-sm-12 col-lg-2 col-md-12 asideLeft">
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        <span id="open-menu" onclick="openNav()">&#9776</span>
+        <div>
+            <img id="LogoGallery" src="IMG/LogoColor/GalleryLogo.png" class="col-md-6"/>
+        </div>
+    </div>
+    <div class="col-sm-12 col-lg-6 col-md-12 content">
+        <ul>
+            <li class="item4 item"><img /></li>
+            <li class="item5 item"><video></video></li>
+            <li class="item5 item"><img /></li><br/>
+            <li class="item2 item"><video></video></li>
+            <li class="item2 item"><img /></li>
+            <li class="item2 item"><video></video></li>
+            <li class="item2 item"><img /></li>
+            <li class="item3 item"><video></video></li>
+            <li class="item3 item"><img /></li>
+            <li class="item3 item"><video></video></li>
+            <li class="item4 item"><img /></li>
+            <li class="item4 item"><video></video></li>
+        </ul>
+    </div>
+    <div class="col-lg-4 asideRight">
+        <video controls>
+            <source src="VideoGallery/mov_bbb.mp4" type="video/mp4">
+            <source src="VideoGallery/mov_bbb.ogg" type="video/ogg">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+</div>
+</div>
+</body>
+</html>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
