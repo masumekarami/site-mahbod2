@@ -6,11 +6,15 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use APP\Aboutme;
+use DB;
 
 class aboutController extends BaseController
 {
-   public function about(){
-       $people =array('john','steve','jack');
-    return view('about',compact('people'));
+   public function index(){
+//       $about= DB::select('SELECT * FROM `tbl_aboutme`');
+//       $about=['tehran','mazandaran'];
+         $about = Aboutme::all()->toArray();
+         return view('aboutme',['about'=>$about]);
    }
 }
