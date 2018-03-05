@@ -14,6 +14,7 @@ class aboutController extends BaseController
    public function index(){
 //       $about= DB::select('SELECT * FROM `tbl_aboutme`');
 //       $about=['tehran','mazandaran'];
+
          $about = Aboutme::all()->toArray();
          return view('aboutme',['about'=>$about]);
    }

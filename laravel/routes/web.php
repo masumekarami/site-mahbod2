@@ -15,5 +15,9 @@
 //Route::get('/', function () {
 //    return view('aboutme');
 //});
-Route::get('/','aboutController@index');
+Route::get('about','aboutController@index');
+Route::get('article','articleController@index');
+Route::get('/',function () {
+    return view('Menu');
+});
 
